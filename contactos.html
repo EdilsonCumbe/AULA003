@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pagina">
+        <div class="menu">
+            <img src="img/Lc3_2018_(263682303)_(cropped).jpeg"
+                style=" display: inline-block;width: 50px;border-radius: 12px; " alt="">
+            <h1 style="display: inline; top: 0;position: absolute;">Linus Torvalds</h1>    
+            <a class="menu-item" style="margin-left: 100px;" href="index.html">Inicio</a>
+            <a class="menu-item" href="carreira.html">Carreira</a>
+            <a class="menu-item" href="linux.html">Linux</a>
+            <a class="menu-item" href="contactos.html">Contactos</a>
+        </div>
+        <div class="conteudo">
+            <h3>Localizaçao</h3>
+            <ul>
+                <li>Rua da TPM </li>
+             <li>Bairro Nkobe</li>
+             <li>Maputo provincia-MP</li>
+            </ul>
+            <H3>Contacto Directo</H3>
+            <ul class="sem-padding sem-marcador">
+                <li>Nome: <strong>Edilson De Elisio Nhapacho Cumbe</strong></li>
+                    <li>Telefone: <strong>(+258) 848872387 && 875969530</strong></li>
+                    <li>Email:<strong>edilsonnhampachojyfree500@gmail.com</strong></li>
+                    <li>instagram:<strong>nhampas_48</strong></li>
+            </ul>
+            <h3>Comunique-se connosco</h3>
+            
+                <label for="nome"><b> Nome:</b></label>
+                <input type="text" id="nome"><br><br>   
+                <label for="email"><b> Email:</b></label>
+                <input type="email"><br>
+                <label for=""><b>Sexo</b></label><br>
+                <label for="">Masculino</label>
+                <input type="radio" name="sexo" id="M" value="Masc">
+                <label for="">Femenino</label>
+                <input type="radio" name="sexo" id="F" value="Fem" checked><br><br>
+                <label for="mensagem"><b>Mensagem</b> </label>
+                <textarea name="" id="mensagem" ></textarea><br><br><br>
+                <button  style="background-color:chartreuse; border-radius: 12px;"type="submit" onclick="conf()">Enviar</button>
+        
+            <div id="confirmacao" style="display: none;">
+                <p><button  style="background-color:red; "  type="submit" onclick="sair()">x</button></p>
+                <p>
+                    <span id="msg"></span>
+                </p>
+                <script>
+                    function conf(){
+                        
+                        var abrir=document.getElementById('confirmacao')
+                        var txt=document.getElementById('mensagem');
+                        var env=document.getElementById('msg');
+                        var nome=document.getElementById('nome');
+                        abrir.style.display='block';
+                       
+                        if (txt.value=="") {
+                            env.innerHTML=" O campo de mensagem deve ser preenchido";
+                            txt.style.backgroundColor='red';
+                        } else {
+                            if (nome.value=="") {
+                            env.innerHTML=" O campo Nome deve ser preenchido";
+                            nome.style.backgroundColor='red';
+                        } else {
+                            
+                            env.innerHTML=" Obrigado por interagir connosco "+nome.value+" volte sempre! ";    
+                        }    
+                        }
+                    
+                    }
+                    function sair(){
+                          var fechar=document.getElementById('confirmacao');
+                          fechar.style.display='none';
+                      }      
+                </script>
+            </div>
+
+            <h3>Referncias: </h3> 
+            <p>
+                http://www.w3.org/History.html. <br>
+                http://www.wikpedia.org.
+            </p>  
+        </div>
+        <div class="footer">
+            Nhampas_Cumbe&copy;2022
+        </div>    
+    </div>
+    
+</body>
+</html>
